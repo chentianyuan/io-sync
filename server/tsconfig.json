@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "outDir": "core",
+    "lib": [
+      "es5",
+      "es6",
+      "es7",
+      "dom"
+    ],
+    "target": "esnext",
+    "allowJs": true,
+    "strict": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "baseUrl": "."
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

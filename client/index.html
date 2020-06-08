@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>io-sync客户端</title>
+</head>
+<body>
+  <div class="app"></div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script>
+const socket = io.connect('http://localhost:1111')
+
+window.emit = function (str) {
+  socket.emit('client command', str)
+}
+
+socket.on('stdout', stdout => {
+  console.log(stdout)
+})
+</script>
+</html>
